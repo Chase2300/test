@@ -1,1 +1,16 @@
-"privet"
+<script>
+            let button = document.querySelector(".calc_button");
+            let inputFirst = document.querySelector(".first");
+            let inputSecond = document.querySelector(".second");
+
+            button.addEventListener("click", (e)=>{
+				let res = document.querySelector(".res")
+                e.preventDefault();
+
+                if(res){
+                    res.remove();
+                }
+
+	 			button.insertAdjacentHTML("afterend", `<div style="color:red" class="res">${inputFirst.value * inputSecond.value}</div>`);
+            })
+</script>
